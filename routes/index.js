@@ -7,7 +7,7 @@ router.get('/hello', (req, res) => {
 router.get('/ip', (req, res) => {
     const clientIp = req.connection.remoteAddress;
   console.log('Client IP:', clientIp);
-  res.json({ message: 'Hello from the API route!', ip: clientIp });
+  res.json({ message: 'Hello from the API route!', ip: clientIp,ips });
 });
 
 export default router;
