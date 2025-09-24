@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { request } from 'express';
 const router = express.Router();
 
 router.get('/hello', (req, res) => {
@@ -7,7 +7,7 @@ router.get('/hello', (req, res) => {
 router.get('/ip', (req, res) => {
     const clientIp = req.connection.remoteAddress;
   console.log('Client IP:', clientIp);
-  res.json({ message: 'Hello from the API route!', ip: clientIp, ips: req.ips });
+  res.json({ message: 'Hello from the API route!', ip: clientIp, ips: req.ips ,requestIp: req.ip});
 });
 
 export default router;
